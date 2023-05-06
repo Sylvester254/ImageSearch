@@ -25,5 +25,4 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('submit/', views.submit_child, name='submit_child'),
     path('search/', views.search_child, name='search_child')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

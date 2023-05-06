@@ -1,23 +1,55 @@
+import os
 from django.shortcuts import render, redirect
 import numpy as np
 from picApp.models import MissingChild
 from picApp.forms import MissingChildForm
 from deepface import DeepFace
 
+# from picSearch import settings
+
+from django.conf import settings
+import os
+
+from django.conf import settings
+import os
+
+import os
+
+from django.core.files.storage import default_storage
+
+from django.core.files.storage import default_storage
+
 def submit_child(request):
     if request.method == 'POST':
         form = MissingChildForm(request.POST, request.FILES)
         if form.is_valid():
             child = form.save(commit=False)
-            image = child.image.path
+            image_name = request.FILES['image'].name
+            image_path = os.path.join('missing_children', image_name)
+            image = os.path.join(settings.MEDIA_ROOT, image_path)
+
+            # Create the missing_children directory if it doesn't exist
+            if not os.path.exists(os.path.dirname(image)):
+                os.makedirs(os.path.dirname(image))
+
+            # Save the image file using default_storage
+            image_file = request.FILES['image']
+            default_storage.save(image_path, image_file)
+
+            child.image.name = image_path
+            child.image._committed = True  # Mark the image as committed
+
+            # Generate the image encoding
             image_encoding = DeepFace.represent(img_path=image, model_name='Facenet', enforce_detection=False)
-            child.image_encoding = image_encoding.tobytes()
+            child.image_encoding = np.array(image_encoding).tobytes()
             child.save()
             return redirect('search_child')
     else:
         form = MissingChildForm()
 
     return render(request, 'submit_child.html', {'form': form})
+
+
 
 def search_child(request):
     if request.method == 'POST':
