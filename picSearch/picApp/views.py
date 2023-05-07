@@ -1,9 +1,17 @@
 import os
+import tempfile
+import cv2
 from django.shortcuts import render, redirect
 import numpy as np
 from picApp.models import MissingChild
 from picApp.forms import MissingChildForm
 from deepface import DeepFace
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+from django.shortcuts import render, redirect
+# from face_aging import age_face_image
+from django.core.files.images import ImageFile
+
 
 # from picSearch import settings
 
@@ -49,22 +57,62 @@ def submit_child(request):
 
     return render(request, 'submit_child.html', {'form': form})
 
-
-
 def search_child(request):
     if request.method == 'POST':
         image = request.FILES['image']
-        img_encoding = DeepFace.represent(img_path=image, model_name='Facenet', enforce_detection=False)
-        
+
+        # Save the uploaded image to a temporary file
+        temp_image = tempfile.NamedTemporaryFile(delete=False)
+        temp_image.write(image.read())
+        temp_image.flush()
+
+        img_encoding = DeepFace.represent(img_path=temp_image.name, model_name='Facenet', enforce_detection=False)
+
         missing_children = MissingChild.objects.all()
         similar_children = []
 
         for child in missing_children:
-            stored_encoding = np.frombuffer(child.image_encoding, dtype=np.float64)
-            similarity = DeepFace.verify(img_encoding, stored_encoding, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
+            child_image_path = os.path.join(settings.MEDIA_ROOT, child.image.name)
+            similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
             if similarity['verified']:
                 similar_children.append(child)
+
+        # Clean up the temporary file
+        temp_image.close()
+        os.unlink(temp_image.name)
 
         return render(request, 'search_results.html', {'similar_children': similar_children})
 
     return render(request, 'search_child.html')
+
+
+# def age_face(request):
+#     if request.method == 'POST':
+#         image = request.FILES['image']
+#         target_age = int(request.POST['target_age'])
+
+#         # Save the uploaded image to a temporary file
+#         temp_image = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg")
+#         temp_image.write(image.read())
+#         temp_image.flush()
+
+#         # Age the face image
+#         aged_image = age_face_image(temp_image.name, target_age)
+
+#         # Save the aged image to a temporary file
+#         temp_aged_image = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg")
+#         cv2.imwrite(temp_aged_image.name, aged_image)
+
+#         # Load the aged image as a Django ImageFile
+#         aged_image_file = ImageFile(open(temp_aged_image.name, 'rb'))
+
+#         # Close and delete the temporary input image file
+#         temp_image.close()
+#         os.remove(temp_image.name)
+
+#         # Pass the aged image file to the context for rendering in the template
+#         context = {'aged_image': aged_image_file}
+
+#         return render(request, 'aged_face.html', context)  
+
+#     return render(request, 'aged_face.html')

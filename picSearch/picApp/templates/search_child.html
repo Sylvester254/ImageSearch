@@ -1,11 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Search for Missing Child</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <label for="image">Upload Child Image:</label>
-        <input type="file" name="image" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="search-container">
+        <h2>Search for Missing Child</h2>
+        <form method="post" enctype="multipart/form-data" class="search-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="image">Upload Child Image:</label>
+                <input type="file" name="image" id="image" required onchange="previewImage(event)">
+            </div>
+            <div class="image-preview-container">
+                <img id="preview" src="" alt="Preview Image" style="display: none; max-width: 100%; max-height: 300px; margin-bottom: 20px; object-fit: contain;">
+            </div>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </div>
+    <script>
+        function previewImage(event) {
+            var input = event.target;
+            var preview = document.getElementById('preview');
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '';
+                preview.style.display = 'none';
+            }
+        }
+    </script>
 {% endblock %}

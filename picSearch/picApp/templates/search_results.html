@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Search Results</h2>
-    {% if similar_children %}
-        <ul>
-        {% for child in similar_children %}
-            <li>
-                <h3>{{ child.name }}</h3>
-                <p>Age: {{ child.age }}</p>
-                <p>Date Missing: {{ child.date_missing }}</p>
-                <p>Place of Birth: {{ child.place_of_birth }}</p>
-                <p>Last Seen: {{ child.last_seen }}</p>
-                <p>Guardian Name: {{ child.guardian_name }}</p>
-                <p>Guardian Contact: {{ child.guardian_contact }}</p>
-                <img src="{{ child.image.url }}" alt="{{ child.name }}" width="200" height="200">
-            </li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No similar faces found.</p>
-    {% endif %}
+    <div class="results-container">
+        <h2>Search Results</h2>
+        {% if similar_children %}
+        <h3>Found Match</h3>
+            <div class="grid">
+            {% for child in similar_children %}
+                <div class="card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="{{ child.image.url }}" alt="{{ child.name }}">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ child.name }}</h4>
+                        <p>Age: {{ child.age }}</p>
+                        <p>Date Missing: {{ child.date_missing }}</p>
+                        <p>Place of Birth: {{ child.place_of_birth }}</p>
+                        <p>Last Seen: {{ child.last_seen }}</p>
+                        <p>Guardian Name: {{ child.guardian_name }}</p>
+                        <p>Guardian Contact: {{ child.guardian_contact }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>No similar faces found.</p>
+        {% endif %}
+    </div>
 {% endblock %}

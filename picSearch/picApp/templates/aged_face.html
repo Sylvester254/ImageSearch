@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Age Face</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="image">Upload an image:</label>
+    <input type="file" name="image" required>
+    <br>
+    <label for="target_age">Target Age:</label>
+    <select name="target_age" required>
+      <option value="1">1</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+      <option value="50">50</option>
+      <option value="60">60</option>
+      <option value="70">70</option>
+    </select>
+    <br>
+    <input type="submit" value="Age Face">
+  </form>
+
+  {% if aged_image %}
+    <h2>Aged Image:</h2>
+    <img src="{{ aged_image.url }}" alt="Aged Face" />
+  {% endif %}
+{% endblock %}
