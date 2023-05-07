@@ -11,9 +11,13 @@
 - run `python manage.py migrate`
 - Then run `python manage.py runserver` to start server
 
-## PARTICIPANTS
+## API Documentation
+
+For information on how to use the Missing Children API, see the [API Documentation](picSearch/API_DOCUMENTATION.md).
+
+## CONTRIBUTORS
 
 	1. BRANDON ODHIAMBO <brandonladen486@gmail.com>
 	2. AMAKAU VITALIS <amakauvitalis202@gmain.com>
-	3. Sylvester Kiranga <slynganga59@gmail.com>
+	3. SYLVESTER NG'ANG'A <slynganga59@gmail.com>
 	4. KAMAU KELVIN <kamau6172@gmail.com>
