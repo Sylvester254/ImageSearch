@@ -1,6 +1,6 @@
 ## We are working on a module that does the following;
 
-	Photo search solution - using a photo search for similar persons or close likeness
+	Photo search solution - using a photo search for similar children or close likeness
 
 	Face progression solution of current age n where n is years from when the available photo was taken  
 ## Running locally
