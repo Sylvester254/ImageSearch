@@ -73,7 +73,7 @@ def search_child(request):
 
         for child in missing_children:
             child_image_path = os.path.join(settings.MEDIA_ROOT, child.image.name)
-            similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
+            similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='VGG-Face', distance_metric='euclidean_l2', enforce_detection=False)
             if similarity['verified']:
                 similar_children.append(child)
 
