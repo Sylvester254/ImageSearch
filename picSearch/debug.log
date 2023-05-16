@@ -1,0 +1,68 @@
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+An error occurred when searching for the child
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py", line 19, in search_child_api
+    image = request.FILES['image']
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'image'
+Internal Server Error: /api/search_child_api/
+An error occurred when searching for the child
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py", line 31, in search_child_api
+    similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 146, in verify
+    img1_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 105, in extract_faces
+    img_region = [0, 0, img.shape[1], img.shape[0]]
+AttributeError: 'NoneType' object has no attribute 'shape'
+Internal Server Error: /api/search_child_api/
+Creating converter from 3 to 5
+An error occurred when searching for the child
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py", line 19, in search_child_api
+    image = request.FILES['image']
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'image'
+Internal Server Error: /api/search_child_api/

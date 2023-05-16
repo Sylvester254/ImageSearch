@@ -6,7 +6,7 @@
         {% if similar_children %}
         <h3>Found Match</h3>
             <div class="grid">
-            {% for child in similar_children %}
+            {% for child, distance in similar_children %}
                 <div class="card">
                     <div class="card-img-container">
                         <img class="card-img" src="{{ child.image.url }}" alt="{{ child.name }}">
@@ -19,6 +19,7 @@
                         <p>Last Seen: {{ child.last_seen }}</p>
                         <p>Guardian Name: {{ child.guardian_name }}</p>
                         <p>Guardian Contact: {{ child.guardian_contact }}</p>
+                        <p>Similarity Distance: {{ distance }}</p>
                     </div>
                 </div>
             {% endfor %}
