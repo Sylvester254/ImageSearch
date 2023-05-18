@@ -24,6 +24,8 @@ header {
   justify-content: space-between;
 }
 
+
+
 .navbar-brand {
   color: #fff;
   font-size: 24px;
@@ -63,6 +65,7 @@ main {
 
 .text-muted {
   color: #6c757d;
+  text-align: center;
 }
 
 .footer {
@@ -125,11 +128,19 @@ button.search-btn:hover {
 }
 
 /*results*/
-
 .results-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+/*added this*/
+.percentage {
+  margin: 0;
+  text-align: right; /* Align the text to the right */
+}
+
+.inline-elements {
+  display: inline-block;
 }
 
 h2, h3 {

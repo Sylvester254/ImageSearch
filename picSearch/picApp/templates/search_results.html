@@ -12,14 +12,17 @@
                         <img class="card-img" src="{{ child.image.url }}" alt="{{ child.name }}">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title">{{ child.name }}</h4>
+                        <div class="inline-elements">
+                            <h3 class="percentage">Similarity: {{ distance }}% </h3>
+                            <h4 class="card-title">{{ child.name }}</h4>
+                        </div>
                         <p>Age: {{ child.age }}</p>
                         <p>Date Missing: {{ child.date_missing }}</p>
                         <p>Place of Birth: {{ child.place_of_birth }}</p>
                         <p>Last Seen: {{ child.last_seen }}</p>
                         <p>Guardian Name: {{ child.guardian_name }}</p>
                         <p>Guardian Contact: {{ child.guardian_contact }}</p>
-                        <p>Similarity Distance: {{ distance }}</p>
+                        <!--<p>Similarity Distance: {{ distance }}</p>-->
                     </div>
                 </div>
             {% endfor %}
