@@ -81,8 +81,9 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "image_search",
         "USER": "root",
-        "PASSWORD": "toor",
-        "HOST": "localhost"
+        "PASSWORD": "wambogas11999",
+        "HOST": "localhost",
+        "PORT": "3306"
     }
 }
 

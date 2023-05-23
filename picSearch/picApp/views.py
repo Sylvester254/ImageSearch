@@ -17,14 +17,14 @@ from django.core.files.images import ImageFile
 from django.conf import settings
 import os
 
-from django.conf import settings
-import os
+#from django.conf import settings
+#import os
 
-import os
-
-from django.core.files.storage import default_storage
+#import os
 
 from django.core.files.storage import default_storage
+
+#from django.core.files.storage import default_storage
 
 def submit_child(request):
     if request.method == 'POST':
@@ -72,15 +72,22 @@ def search_child(request):
             child_image_path = os.path.join(settings.MEDIA_ROOT, child.image.name)
             similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
             if similarity['verified']:
-                similar_children.append((child, similarity['distance']))
+                distance = similarity['distance']
+                distance = float(distance) #convert the string into float
+                similarity_percentage = round(1 / (1 + distance) * 100, 2)
+                similar_children.append((child, similarity_percentage))
+            
+            
 
         # Clean up the temporary file
         temp_image.close()
         os.unlink(temp_image.name)
 
-        # Sort the similar children by distance
-        similar_children.sort(key=lambda x: x[1])
+        # Sort the similar children by distance in reverse order
+        similar_children.sort(key=lambda x: x[1], reverse=True)
 
-        return render(request, 'search_results.html', {'similar_children': similar_children})
+        #added these
+        context = {'similar_children': similar_children}
+        return render(request, 'search_results.html', context)
 
     return render(request, 'search_child.html')
