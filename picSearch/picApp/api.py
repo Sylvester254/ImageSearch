@@ -30,7 +30,10 @@ def search_child_api(request):
                 child_image_path = os.path.join(settings.MEDIA_ROOT, child.image.name)
                 similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
                 if similarity['verified']:
-                    similar_children.append((child, similarity['distance']))
+                    distance = similarity['distance']
+                    distance = float(distance)
+                    similarity_percentage = round(1 / (1 + distance) * 100, 2)
+                    similar_children.append((child, similarity_percentage))
 
             # Clean up the temporary file
             temp_image.close()
@@ -41,7 +44,7 @@ def search_child_api(request):
 
             # Serialize the similar_children queryset
             results = []
-            for child, distance in similar_children:
+            for child, similarity_percentage in similar_children:
                 results.append({
                     'id': child.id,
                     'name': child.name,
@@ -52,7 +55,7 @@ def search_child_api(request):
                     'last_seen': child.last_seen,
                     'guardian_name': child.guardian_name,
                     'guardian_contact': child.guardian_contact,
-                    'similarity_distance': distance,
+                    'similarity_distance': similarity_percentage,
                 })
 
             return Response(results, status=status.HTTP_200_OK)
