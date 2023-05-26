@@ -25,16 +25,16 @@ The base URL for the API will depend on where you have deployed your Django appl
 
 - Body: An array of objects, each representing a missing child that has a similar image to the one provided in the request. Each object contains the following fields:
 
-    id: The unique identifier of the missing child.
-    name: The name of the missing child.
-    age: The age of the missing child.
-    image_url: The URL of the missing child's image.
-    date_missing: The date when the child went missing (format: YYYY-MM-DD).
-    place_of_birth: The place of birth of the missing child.
-    last_seen: The location where the child was last seen.
-    guardian_name: The name of the child's guardian.
-    guardian_contact: The contact information of the child's guardian.
-    similarity_distance: The percentage of similarity between the uploaded image and the missing child's image.
+    - id: The unique identifier of the missing child.
+    - name: The name of the missing child.
+    - age: The age of the missing child.
+    - image_url: The URL of the missing child's image.
+    - date_missing: The date when the child went missing (format: YYYY-MM-DD).
+    - place_of_birth: The place of birth of the missing child.
+    - last_seen: The location where the child was last seen.
+    - guardian_name: The name of the child's guardian.
+    - guardian_contact: The contact information of the child's guardian.
+    - similarity_distance: The percentage of similarity between the uploaded image and the missing child's image.
 
 **Error Responses**
 
