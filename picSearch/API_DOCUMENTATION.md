@@ -19,7 +19,7 @@ The base URL for the API will depend on where you have deployed your Django appl
     image (required): An image file of the missing child.
 
 **Response**
-- Status Code: 200 OK
+- Status Code: `200 OK`
 
 - Content-Type: application/json
 
@@ -34,6 +34,17 @@ The base URL for the API will depend on where you have deployed your Django appl
     last_seen: The location where the child was last seen.
     guardian_name: The name of the child's guardian.
     guardian_contact: The contact information of the child's guardian.
+    similarity_distance: The percentage of similarity between the uploaded image and the missing child's image.
+
+**Error Responses**
+
+- Status Code: `400 BAD REQUEST`
+- Body: An object with the following field:
+- detail: Error message indicating the cause of the error, e.g., "No face detected. Please upload an image with a face."
+
+- Status Code: `500 INTERNAL SERVER ERROR`
+- Body: An object with the following field:
+- detail: Error message providing details of the encountered server error.
     
 *Example*
 
