@@ -1,8 +1,7 @@
 ## We are working on a module that does the following;
+- Photo search solution - using a photo search for similar children or close likeness
+- Face progression solution of current age n where n is years from when the available photo was taken  
 
-	Photo search solution - using a photo search for similar children or close likeness
-
-	Face progression solution of current age n where n is years from when the available photo was taken  
 ## Running locally
 - create a database and update the `settings.py` located inside `picSearch/picSearch` path
 - create your virtual environment
@@ -20,4 +19,4 @@ For information on how to use the Missing Children API, see the [API Documentati
 	1. BRANDON ODHIAMBO <brandonladen486@gmail.com>
 	2. AMAKAU VITALIS <amakauvitalis202@gmain.com>
 	3. SYLVESTER NG'ANG'A <slynganga59@gmail.com>
-	4. KAMAU KELVIN <kamau6172@gmail.com>
+

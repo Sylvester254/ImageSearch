@@ -3,6 +3,9 @@
 {% block content %}
     <div class="search-container">
         <h2>Search for Missing Child</h2>
+        {% if error %}
+                <div class="error-message">{{ error }}</div>
+        {% endif %}
         <form method="post" enctype="multipart/form-data" class="search-form">
             {% csrf_token %}
             <div class="form-group">
@@ -20,6 +23,16 @@
             </div>
         </div>
     </div>
+    <style>
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+        }
+    </style>
     <script>
         function previewImage(event) {
             var input = event.target;

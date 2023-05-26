@@ -779,3 +779,457 @@ Creating converter from 5 to 7
 Creating converter from 7 to 5
 Creating converter from 5 to 7
 Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): github.com:443
+https://github.com:443 "GET /serengil/deepface_models/releases/download/v1.0/vgg_face_weights.h5 HTTP/1.1" 302 0
+Starting new HTTPS connection (1): objects.githubusercontent.com:443
+https://objects.githubusercontent.com:443 "GET /github-production-release-asset-2e65be/382368840/6bf9ba80-db5a-11eb-8b48-84b0d02a64ec?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230524%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230524T121151Z&X-Amz-Expires=300&X-Amz-Signature=572edcc11dc5bdc896cfe4da9ab00a231240768a7d0747aadf61d73baf0a59b6&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=382368840&response-content-disposition=attachment%3B%20filename%3Dvgg_face_weights.h5&response-content-type=application%2Foctet-stream HTTP/1.1" 200 580085408
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Not Found: /favicon.ico
+Creating converter from 3 to 5
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 3 to 5
+Starting new HTTPS connection (1): github.com:443
+https://github.com:443 "GET /serengil/deepface_models/releases/download/v1.0/facial_expression_model_weights.h5 HTTP/1.1" 302 0
+Starting new HTTPS connection (1): objects.githubusercontent.com:443
+https://objects.githubusercontent.com:443 "GET /github-production-release-asset-2e65be/382368840/0c6bd100-db93-11eb-819c-0b61869108d3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230524%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230524T122656Z&X-Amz-Expires=300&X-Amz-Signature=29170963f87718efc48d72f0b69baf0c503aadda2934748aa7ef7b10c2605cc4&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=382368840&response-content-disposition=attachment%3B%20filename%3Dfacial_expression_model_weights.h5&response-content-type=application%2Foctet-stream HTTP/1.1" 200 5977392
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Not Found: /favicon.ico
+Creating converter from 3 to 5
+An error occurred when searching for the child
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py", line 19, in search_child_api
+    image = request.FILES['image']
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'image'
+Internal Server Error: /api/search_child_api/
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 3 to 5
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Not Found: /
+Not Found: /favicon.ico
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Not Found: /favicon.ico
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FitsStubImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Creating converter from 3 to 5
+Internal Server Error: /submit/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1048, "Column 'age' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 47, in submit_child
+    child.save()
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 80, in execute
+    raise IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'age' cannot be null")
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/models.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FitsStubImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Creating converter from 3 to 5
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 3 to 5
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 3 to 5
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 68, in search_child
+    temp_image.close()
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 820, in detectFace
+    face_objs = extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+Creating converter from 3 to 5
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 64, in search_child
+    detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+Creating converter from 3 to 5
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 64, in search_child
+    detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 64, in search_child
+    detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 64, in search_child
+    detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py", line 64, in search_child
+    detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/DeepFace.py", line 787, in extract_faces
+    img_objs = functions.extract_faces(
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/deepface/commons/functions.py", line 115, in extract_faces
+    raise ValueError(
+ValueError: Face could not be detected. Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 3 to 5
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py changed, reloading.
+Watching for file changes with StatReloader
+Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Bad Request: /api/search_child_api/
+An error occurred when searching for the child
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/silver/Hackathon/ImageSearch/picSearch/picApp/api.py", line 19, in search_child_api
+    image = request.FILES['image']
+  File "/home/silver/Hackathon/ImageSearch/myenv/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'image'
+Internal Server Error: /api/search_child_api/
+Creating converter from 3 to 5
+Bad Request: /api/search_child_api/

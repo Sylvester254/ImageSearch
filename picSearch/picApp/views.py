@@ -60,34 +60,40 @@ def search_child(request):
         temp_image.write(image.read())
         temp_image.flush()
 
+        # Perform face detection on the image
+        try:
+            detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+        except ValueError as e:
+            # Clean up the temporary file
+            temp_image.close()
+            os.unlink(temp_image.name)
+
+            return render(request, 'search_child.html', {'error': 'No face detected. Please upload an image with a face.'})
+
         missing_children = MissingChild.objects.all()
         similar_children = []
 
         for child in missing_children:
             child_image_path = os.path.join(settings.MEDIA_ROOT, child.image.name)
-            similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='VGG-Face', distance_metric='euclidean_l2', enforce_detection=False)
+
+            # Perform similarity verification only if a face is detected
+            similarity = DeepFace.verify(temp_image.name, child_image_path, model_name='Facenet', distance_metric='euclidean_l2', enforce_detection=False)
             if similarity['verified']:
                 distance = similarity['distance']
-                distance = float(distance) #convert the string into float
+                distance = float(distance)
                 similarity_percentage = round(1 / (1 + distance) * 100, 2)
-                similar_children.append((child, similarity_percentage))
-                
-                # # Analyze the child image for emotion, age, gender, and race
-                # analyze_result = DeepFace.analyze(child_image_path, actions=['emotion', 'age', 'gender', 'race'])
-                # print('Emotion:', analyze_result['dominant_emotion'])
-                # print('Age:', analyze_result['age'])
-                # print('Gender:', analyze_result['gender'])
-                # print('Race:', analyze_result['dominant_race'])
-                # print('---')
+                if similarity_percentage > 60:
+                    similar_children.append((child, similarity_percentage))
 
         # Clean up the temporary file
         temp_image.close()
         os.unlink(temp_image.name)
 
-        # Sort the similar children by distance in reverse order
+        # Sort the similar children by similarity percentage in reverse order
         similar_children.sort(key=lambda x: x[1], reverse=True)
 
         context = {'similar_children': similar_children}
         return render(request, 'search_results.html', context)
 
     return render(request, 'search_child.html')
+

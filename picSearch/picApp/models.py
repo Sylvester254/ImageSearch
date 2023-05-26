@@ -8,7 +8,7 @@ class MissingChild(models.Model):
     )
 
     name = models.CharField(max_length=100)
-    age = models.PositiveIntegerField()
+    age = models.PositiveIntegerField(default=0)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default='O')
     image = models.ImageField(upload_to='')
     image_encoding = models.BinaryField()

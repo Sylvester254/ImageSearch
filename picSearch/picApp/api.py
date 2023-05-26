@@ -23,6 +23,16 @@ def search_child_api(request):
             temp_image.write(image.read())
             temp_image.flush()
 
+            # Perform face detection on the image
+            try:
+                detected_faces = DeepFace.extract_faces(temp_image.name, enforce_detection=True)
+            except ValueError as e:
+                # Clean up the temporary file
+                temp_image.close()
+                os.unlink(temp_image.name)
+
+                return Response({'detail': 'No face detected. Please upload an image with a face.'}, status=status.HTTP_400_BAD_REQUEST)
+
             missing_children = MissingChild.objects.all()
             similar_children = []
 
@@ -33,7 +43,8 @@ def search_child_api(request):
                     distance = similarity['distance']
                     distance = float(distance)
                     similarity_percentage = round(1 / (1 + distance) * 100, 2)
-                    similar_children.append((child, similarity_percentage))
+                    if similarity_percentage > 60:
+                        similar_children.append((child, similarity_percentage))
 
             # Clean up the temporary file
             temp_image.close()
